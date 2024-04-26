@@ -11,13 +11,13 @@
 Research Scientist, IXL Learning (2022-present)
 - Published over 25 solo-author studies on IXL's efficacy and psychometric properties
 - Cleaned, processed, and analyzed data from over 1,000,000 Indiana students to validate IXL's assessment suite
-- Using R (tidyverse, ggplot2, lme4, etc) to translate large, raw datasets into actionable insights and impact
+- Using _**R**_ (tidyverse, ggplot2, lme4, etc) to translate large, raw datasets into actionable insights and impact
 
 Assistant Professor, Texas Christian University
 - Established and directed the Hargis Cognition Lab, supervising dozens of research studies, two Ph.D. students, and 20+ undergraduate research assistants
 - Taught courses in Research Methods, Cognition, and more at the undergraduate and Ph.D. levels (>2,000 students)
 
-<a href="img/MH-Resume.pdf" class="image fit"><img src="img/MH-Resume.pdf" alt=""></a>
+<a href="maryhargis.github.io/portfolio/img/MH-Resume.pdf" target="_blank">PDF.</a>
 
 ## Projects
 
