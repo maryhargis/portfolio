@@ -1,11 +1,11 @@
 # Data & Research Scientist
 
-#### Technical Skills: R, multilevel modelling, GLM, experimentation
+#### Technical Skills: R, multilevel modelling, GLM, SQL, experimentation
 
 ## Education
-- **Ph.D., Cognitive Psychology**, University of California, Los Angeles (_2019_)								       		
-- **M.A., Cognitive Psychology**,	University of California, Los Angeles (_2015_)	 			        		
-- **B.A., Cognitive Science**, University of Southern California (_2014_)
+- **Ph.D., Cognitive Psychology**, Univ. of California, Los Angeles (_2019_)								       		
+- **M.A., Cognitive Psychology**,	Univ. of California, Los Angeles (_2015_)	 			        		
+- **B.A., Cognitive Science**, Univ. of Southern California (_2014_)
   
 ### Work Experience
 Research Scientist, IXL Learning (2022-present)
