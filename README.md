@@ -5,7 +5,7 @@
 ## Education
 - Ph.D., Cognitive Psychology | University of California, Los Angeles (_2019_)								       		
 - M.A., Cognitive Psychology	|  University of California, Los Angeles (_2015_)	 			        		
-- B.A., Cognitive Science | Phi Beta Kappa | University of Southern California (_2014_)
+- B.A., Cognitive Science, Phi Beta Kappa | University of Southern California (_2014_)
   
 ### Work Experience
 Research Scientist, IXL Learning (2022-present)
