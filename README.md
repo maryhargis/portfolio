@@ -19,11 +19,10 @@ Research Scientist, IXL Learning (2022-present)
 [Publication]([https://www.ixl.com/materials/us/research/Predicting_Performance_on_ILEARN.pdf])
 Developed and executed optimal strategy for assessing psychometric properties of IXL's Diagnostic -- the first study of this size. This data-driven approach filled an existing research gap and was a crucial component of IXL's eligibility for a grant (RFP) with the state of Indiana (total allocation of $14,000,000). My method provides a comprehensive assessment of IXL's predictive validity, reliability, AUC, and classification accuracy, further demonstrating the Diagnostic's strong ability to predict performance on state assessments.
 
-![ILEARN-Math](/img/ilearn-ela-scatter.png)
-Note. _n_ = 16,540
+![ILEARN-Math](/img/ilearn-math-scatter.png)
+- Note. _n_ = 16,540
 ![ILEARN-ELA](/img/ilearn-ela-scatter.png)
-Note. _n_ = 14,196
+- Note. _n_ = 14,196
 
 ![ILEARN-AUC](ilearn-auc-by-strand.png)
-Note. In 2021-2022, Math _n_ = 13,146; ELA _n_ = 11,674. In 2022-2023, Math _n_ = 16,540; ELA _n_ = 14,196.
 
