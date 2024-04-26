@@ -17,7 +17,7 @@ Assistant Professor, Texas Christian University
 - Established and directed the Hargis Cognition Lab, supervising dozens of research studies, two Ph.D. students, and 20+ undergraduate research assistants
 - Taught courses in Research Methods, Cognition, and more at the undergraduate and Ph.D. levels (>2,000 students)
 
-[View full resume]([img/MH Resume - April 2024.pdf])
+[View full resume]([img/MH-Resume.pdf])
 
 
 ## Projects
