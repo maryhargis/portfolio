@@ -1,6 +1,5 @@
 title: Dr. Mary B. Hargis
-logo: /mary-hargis.png
-remote_theme: pages-themes/minimal@v0.2.0
+logo: /mary-hargis.jpeg
+description: Mary is a curious, energetic data and research enthusiast.
 show_downloads: true
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+theme: jekyll-theme-minimal
