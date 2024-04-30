@@ -1,6 +1,6 @@
 # Data & Research Scientist
 
-#### Technical Skills: R, multilevel modelling, GLM, SQL, experimentation
+#### Technical Skills: R, multilevel modelling, GLM, experimentation, familiar with SQL and python
 
 ## Education
 - **Ph.D., Cognitive Psychology**, Univ. of California, Los Angeles (_2019_)								       		
