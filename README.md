@@ -28,7 +28,6 @@ What makes a good run? I analyze my own pace and cadence by run type (outdoor ro
 
 
 <img src="https://github.com/maryhargis/portfolio/blob/864b6725c635ff43085ed258028cb491717a77e2/garmin/pace_plot.png" width="500" height="500">
-<img src="https://github.com/maryhargis/portfolio/blob/864b6725c635ff43085ed258028cb491717a77e2/garmin/cadence_plot.png" width="500" height="500">
 
 
 
