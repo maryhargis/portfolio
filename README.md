@@ -24,10 +24,10 @@ Assistant Professor, Texas Christian University
 ### Personal project: My running data (Garmin watch stats)
 What makes a good run? I analyze my own pace and cadence by run type (outdoor roads vs. indoor treadmill).
 
-<a href="https://github.com/maryhargis/portfolio/tree/1b8e1d323730dc6726c4f49f027f2ecd255908f1" target="_blank">Code on Github.</a>
+<a href="https://github.com/maryhargis/portfolio/tree/d2fe7904331b7eb681eea074cf4b931d137e6b6f/garmin" target="_blank">Code on Github.</a>
 
 
-<img src="https://github.com/maryhargis/portfolio/blob/9cc4b76dafed4a1fc13f567dfabae50767ac26c5/garmin/pace_plot.png" width="500" height="500">
+<img src="https://github.com/maryhargis/portfolio/blob/d2fe7904331b7eb681eea074cf4b931d137e6b6f/garmin/pace_plot.png" width="500" height="500">
 
 
 
