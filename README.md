@@ -21,16 +21,18 @@ Assistant Professor, Texas Christian University
 
 ## Projects
 
-###Personal project- My running data (Garmin watch stats)
+### Personal project: My running data (Garmin watch stats)
 What makes a good run? I analyze my own pace and cadence by run type (outdoor roads vs. indoor treadmill).
 
-[Code on Github]([https://github.com/maryhargis/portfolio/tree/1b8e1d323730dc6726c4f49f027f2ecd255908f1/garmin])
-![cadence_plot](/garmin/cadence_plot.png)
-![pace_plot](/garmin/pace_plot.png)
+<a href="https://github.com/maryhargis/portfolio/tree/1b8e1d323730dc6726c4f49f027f2ecd255908f1/garmin" target="_blank">Code on Github.</a>
+
+
+<img src="https://github.com/maryhargis/portfolio/blob/864b6725c635ff43085ed258028cb491717a77e2/garmin/pace_plot.png" width="500" height="500">
+<img src="https://github.com/maryhargis/portfolio/blob/864b6725c635ff43085ed258028cb491717a77e2/garmin/cadence_plot.png" width="500" height="500">
 
 
 
-### Predicting assessment performance using IXL's analytics
+### Work project: Predicting assessment performance using IXL's analytics
 [Publication]([https://www.ixl.com/materials/us/research/Predicting_Performance_on_ILEARN.pdf])
 
 Developed and executed optimal strategy for assessing psychometric properties of IXL's Diagnostic using _**R**_ -- the first study of this size. This data-driven approach filled an existing research gap and was a crucial component of IXL's eligibility for a grant (RFP) with the state of Indiana (total allocation of $14,000,000). My method provides a comprehensive assessment of IXL's predictive validity, reliability, AUC, and classification accuracy, further demonstrating the Diagnostic's strong ability to predict performance on state assessments.
