@@ -174,7 +174,7 @@ fast_plot_2 <- good_run_fast %>%
   theme(legend.position = "off") + scale_colour_manual(values=cbp1)
 fast_plot_2
 
-ggsave("pace_plot.png", fast_plot_2)
+ggsave("pace_plot.png", fast_plot_2, width = 4, height = 4)
 
 #pace by activity type
 cbp2 <- c( "#56B4E9", "#D55E00")
@@ -191,7 +191,7 @@ cadence_plot_2 <- good_run_cadence %>%
   theme(legend.position = "off") + scale_colour_manual(values=cbp2)
 cadence_plot_2
 
-ggsave("cadence_plot.png", cadence_plot_2)
+ggsave("cadence_plot.png", cadence_plot_2, width = 4, height = 4)
 
 ```
 
