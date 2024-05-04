@@ -22,16 +22,8 @@ options(sci_pen = 100)
 
 #read in dataset
 ```{r}
-garmin_raw <- read.csv("Activities.csv") %>% clean_names
-#Activities csv will not be publicly available because it includes location of my activities
-
-#for privacy reasons, remove location info
-garmin_raw_no_location <- garmin_raw %>% select(-title)
-
-#write raw dataset to share on github
-write.csv(garmin_raw_no_location, "garmin_raw.csv")
-
 garmin_raw_no_location <- read.csv("garmin_raw.csv") %>% clean_names
+
 garmin_running <- garmin_raw_no_location %>% filter(str_detect(activity_type, "Running"))
 
 ```
@@ -44,7 +36,7 @@ garmin_running <- garmin_raw_no_location %>% filter(str_detect(activity_type, "R
 
 #1a: operationalizing a "good" run as a faster pace -- minutes per mile
 good_run_fast <- garmin_running %>% 
-  select(activity_type, distance, time, avg_pace, best_pace,  max_temp, aerobic_te) %>% 
+  select(activity_type, distance, time, avg_pace, best_pace,  max_temp, aerobic_te, avg_run_cadence) %>% 
   mutate(across(c(distance, max_temp), as.numeric)) %>% filter(activity_type != "Trail Running")
 #converting time data from character to time
 good_run_fast <- good_run_fast %>% 
@@ -59,6 +51,12 @@ good_run_fast <- good_run_fast %>%
   mutate(avg_pace_in_minutes = (avg_pace_seconds/60)+avg_pace_minutes) %>%
   mutate(aerobic_te = as.numeric(aerobic_te))
 
+#remove outliers on pace
+mean_pace = mean(good_run_fast$avg_pace_in_minutes)
+sd_pace = sd(good_run_fast$avg_pace_in_minutes)
+good_run_fast <- good_run_fast %>% filter(avg_pace_in_minutes < (mean_pace + (3*sd_pace))) %>% filter(avg_pace_in_minutes > (mean_pace - (3*sd_pace)))
+
+
 
 #1b: operationalizing a "good" run using cadence (faster running needs higher foot turnover)
 good_run_cadence <- garmin_running  %>% select(activity_type, distance, avg_pace, avg_run_cadence, max_temp, aerobic_te) %>% 
@@ -72,6 +70,12 @@ good_run_cadence <- good_run_cadence %>%
   mutate(avg_run_cadence = as.numeric(avg_run_cadence))%>%
   mutate(aerobic_te = as.numeric(aerobic_te))
 
+#remove outliers on cadence
+mean_cadence = mean(good_run_cadence$avg_run_cadence)
+sd_cadence = sd(good_run_cadence$avg_run_cadence)
+good_run_cadence <- good_run_cadence %>% filter(avg_run_cadence < (mean_cadence + (3*sd_cadence))) %>% filter(avg_run_cadence > (mean_cadence - (3*sd_cadence)))
+
+
 ```
 
 ##analysis
@@ -79,9 +83,9 @@ good_run_cadence <- good_run_cadence %>%
 ```{r}
 #descriptives
 ##1a
-describeBy(good_run_fast$avg_pace_in_minutes, good_run_fast$activity_type) #226 regular runs,  105 treadmill runs 
+describeBy(good_run_fast$avg_pace_in_minutes, good_run_fast$activity_type) #226 regular runs,  103 treadmill runs 
 ##1b
-describeBy(good_run_cadence$avg_run_cadence, good_run_cadence$activity_type)
+describeBy(good_run_cadence$avg_run_cadence, good_run_cadence$activity_type) #226 regular runs,  100 treadmill runs 
 ```
 
 
@@ -153,6 +157,44 @@ summary(cadence_model)
 #-no effect of temp. 
 #-Outdoor runs are the reference group; treadmill runs are slower cadence!
 ```
+##figures
+```{r}
+#pace by activity type
+cbp1 <- c( "#56B4E9", "#D55E00")
+
+fast_plot_2 <- good_run_fast %>% 
+  ggplot(aes (x = avg_pace_in_minutes, y = activity_type, color = activity_type))+
+  stat_sum(aes(size = factor(..n..)), geom = "point") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
+  scale_y_discrete(limits = rev) +
+    labs(x = "Number of runs",
+       y = "Pace (minutes per mile)",
+       title = "Run pace (minutes/mile) by activity type",
+       caption = "Data source: Garmin Forerunner 645") +
+  theme(legend.position = "off") + scale_colour_manual(values=cbp1)
+fast_plot_2
+
+ggsave("pace_plot.png", fast_plot_2)
+
+#pace by activity type
+cbp2 <- c( "#56B4E9", "#D55E00")
+
+cadence_plot_2 <- good_run_cadence %>% 
+  ggplot(aes (x = avg_run_cadence, y = activity_type, color = activity_type))+
+  stat_sum(aes(size = factor(..n..)), geom = "point") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
+  scale_y_discrete(limits = rev) +
+    labs(x = "Number of runs",
+       y = "Cadence (steps per minute)",
+       title = "Run cadence (steps/minute) by activity type",
+       caption = "Data source: Garmin Forerunner 645") +
+  theme(legend.position = "off") + scale_colour_manual(values=cbp2)
+cadence_plot_2
+
+ggsave("cadence_plot.png", cadence_plot_2)
+
+```
+
 
 
 
