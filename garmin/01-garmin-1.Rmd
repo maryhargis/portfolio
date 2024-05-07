@@ -159,6 +159,10 @@ summary(cadence_model)
 ```
 ##figures
 ```{r}
+
+#rename running variable
+good_run_fast$activity_type <- sub( "^Running$", "Outdoor Running", good_run_fast$activity_type)
+
 #pace by activity type
 cbp1 <- c( "#56B4E9", "#D55E00")
 
@@ -167,16 +171,21 @@ fast_plot_2 <- good_run_fast %>%
   stat_sum(aes(size = factor(..n..)), geom = "point") +
   scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
   scale_y_discrete(limits = rev) +
-    labs(x = "Number of runs",
-       y = "Pace (minutes per mile)",
+    labs(x = "Pace (min/mile)",
+       y = "Activity type",
        title = "Run pace (minutes/mile) by activity type",
        caption = "Data source: Garmin Forerunner 645") +
   theme(legend.position = "off") + scale_colour_manual(values=cbp1)
 fast_plot_2
 
-ggsave("pace_plot.png", fast_plot_2, width = 4, height = 4)
+ggsave("pace_plot.png", fast_plot_2)
 
-#pace by activity type
+#cadence by activity type
+
+#rename running variable
+good_run_cadence$activity_type <- sub( "^Running$", "Outdoor Running", good_run_cadence$activity_type)
+
+
 cbp2 <- c( "#56B4E9", "#D55E00")
 
 cadence_plot_2 <- good_run_cadence %>% 
@@ -184,14 +193,14 @@ cadence_plot_2 <- good_run_cadence %>%
   stat_sum(aes(size = factor(..n..)), geom = "point") +
   scale_x_continuous(expand = expansion(mult = c(0, 0.1))) +
   scale_y_discrete(limits = rev) +
-    labs(x = "Number of runs",
-       y = "Cadence (steps per minute)",
+    labs(x = "Cadence (steps per minute)",
+       y = "Activity type",
        title = "Run cadence (steps/minute) by activity type",
        caption = "Data source: Garmin Forerunner 645") +
   theme(legend.position = "off") + scale_colour_manual(values=cbp2)
 cadence_plot_2
 
-ggsave("cadence_plot.png", cadence_plot_2, width = 4, height = 4)
+ggsave("cadence_plot.png", cadence_plot_2)
 
 ```
 
