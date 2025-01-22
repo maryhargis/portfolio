@@ -1,4 +1,4 @@
-# Data & Research Scientist
+# Senior Research Scientist
 
 #### Technical Skills: R, multilevel modelling, GLM, experimentation, familiar with SQL and python
 
@@ -8,9 +8,9 @@
 - **B.A., Cognitive Science**, Univ. of Southern California (_2014_)
   
 ### Work Experience
-Research Scientist, IXL Learning (2022-present)
-- Published over 25 solo-author studies on IXL's efficacy and psychometric properties
-- Cleaned, processed, and analyzed data from over 1,000,000 Indiana students to validate IXL's assessment suite
+Senior Research Scientist, IXL Learning (2022-present)
+- Published over 40 research studies on IXL's efficacy and psychometric properties
+- Cleaned, processed, and analyzed data from over 1,000,000 students to validate IXL's assessment suite
 - Using _**R**_ (tidyverse, ggplot2, lme4, etc) to translate large, raw datasets into actionable insights and impact
 
 Assistant Professor, Texas Christian University
